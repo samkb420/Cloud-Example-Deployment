@@ -1,0 +1,53 @@
+.navbar {
+  background: white;
+}
+
+ul, li {
+  padding-left: 1em;
+  padding-right: 2em;
+}
+
+.learn {
+  -webkit-text-decoration: underline 4px;
+          text-decoration: underline 4px;
+  -webkit-text-decoration-color: aqua;
+          text-decoration-color: aqua;
+  border-bottom: 2px;
+}
+
+.form_div {
+  margin-top: 50%;
+  height: 50rem;
+}
+
+.fa-graduation-cap {
+  color: red;
+}
+
+mark {
+  background-color: yellow;
+  border-radius: 5px;
+  font-family: fantasy;
+}
+
+.span_logo {
+  color: red;
+}
+
+.card {
+  border-top: 2px solid red;
+}
+
+.courses_links {
+  background: #000000;
+  height: auto;
+}
+
+img {
+  margin-top: 3rem;
+}
+
+.span_green {
+  color: #09c709;
+}
+/*# sourceMappingURL=main.css.map */
