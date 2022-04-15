@@ -103,7 +103,7 @@ mongoose
     useNewUrlParser: true,
   })
   .then(() => {
-    app.listen( process.env.PORT || 3002, () => {
-      console.log("Server is running on Port 3000");
+    app.listen( process.env.PORT ||8080, () => {
+      console.log("Server is running on Port 8080");
     });
   });
