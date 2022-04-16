@@ -98,12 +98,13 @@ app.delete("/logout", (req, res) => {
 });
 
 mongoose
-  .connect("mongodb+srv://sam:12345678sK@cluster0.ubll2.mongodb.net/mvc?retryWrites=true&w=majority", {
+  .connect(process.env.URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
   .then(() => {
     app.listen( process.env.PORT ||8080, () => {
+      // console.log(process.env.URL)
       console.log("Server is running on Port 8080");
     });
   });
