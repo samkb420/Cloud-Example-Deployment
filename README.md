@@ -35,5 +35,12 @@ eksctl create cluster --name eksctl-demo --region=us-west-2
 ```
 eksctl utils describe-stacks --region=us-west-2 --cluster=eksctl-demo
 ```
-4. Deploy the Sample App
-5. 
+* Checking on health state of nodes
+```kubectl get nodes 
+```
+4. Deploy the Sample App to Kubernetes Cluster
+```# Assuming you have already cloned the course repo as
+git clone 
+# Move to the exercise folder if you want to write Dockerfile from scratch
+cd DevOps_Microservices/Lesson-3-Containerization/python-helloworld
+ 
