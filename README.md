@@ -40,7 +40,30 @@ eksctl utils describe-stacks --region=us-west-2 --cluster=eksctl-demo
 ```
 4. Deploy the Sample App to Kubernetes Cluster
 ```# Assuming you have already cloned the course repo as
-git clone 
+git clone https://github.com/samkb420/Cloud-Example-Deployment.git
 # Move to the exercise folder if you want to write Dockerfile from scratch
-cd DevOps_Microservices/Lesson-3-Containerization/python-helloworld
- 
+cd Cloud-Example-Deployment
+```
+* docker login
+* Running run docker.sh script to build an image and run in locally
+* Next is tagging and pushing the image 
+```docker tag sample elsiedev/dscsample
+docker push elsiedev/dscsample
+```
+ Once docker image is locally available,we deploy to kubernetes cluster
+ ```
+ # Assuming the Kubernetes cluster is ready
+kubectl get nodes
+# Deploy an App from the Dockerhub to the Kubernetes Cluster
+kubectl create deploy sample --image=elsiedev/dscsample
+# See the status
+kubectl get deploy,rs,svc,pods
+# Port forward 
+ kubectl port-forward pod/dscsample-5cfddb8d9d-lfzcg --address 0.0.0.0 8080:8080 dscsample
+```
+Accessing the app locally. 
+
+5. Deleting the cluster to avoid recurring charges.
+Delete from the cloud formation web console or using the utility command 
+```eksctl delete cluster --region=us-west-2 --name=eksctl-demo
+```
